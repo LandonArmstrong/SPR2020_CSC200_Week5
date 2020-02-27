@@ -15,6 +15,11 @@ namespace Week5ConsoleApp
             SayGoodbye();
             SayHelloTo("something");
             SayHelloTo("something");
+            int a = 3;
+            int b = 5;
+            int c = AddTogether(a, b);
+
+            Console.WriteLine("Output of sum(a,b) = " + c);
         }
 
         public static void SayHello()
@@ -35,6 +40,11 @@ namespace Week5ConsoleApp
         {
             Console.WriteLine("Goodbye" + name);
 
+        }
+
+        public static int AddTogether(int left, int right)
+        {
+            return left + right;
         }
     }
 }
