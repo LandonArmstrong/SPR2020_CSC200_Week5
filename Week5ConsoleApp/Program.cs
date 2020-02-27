@@ -18,6 +18,7 @@ namespace Week5ConsoleApp
             int a = 3;
             int b = 5;
             int c = AddTogether(a, b);
+            string phrase = "How is your day";
 
             Console.WriteLine("Output of sum(a,b) = " + c);
         }
@@ -45,6 +46,18 @@ namespace Week5ConsoleApp
         public static int AddTogether(int left, int right)
         {
             return left + right;
+        }
+        public static int SpaceCount(string phrase)
+        {
+            int count = 0;
+            for (int i = 0; i <= phrase.Length; i++)
+            {
+                if (phrase[i].Equals(""))
+                {
+                    count++;
+                }
+            }
+            return count;
         }
     }
 }
