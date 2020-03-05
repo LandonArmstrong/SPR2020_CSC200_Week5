@@ -10,8 +10,14 @@ namespace Week6ConsoleApp
     {
         static void Main(string[] args)
         {
-            int a = 25;
-            
+            int a = 5;
+            int b = 3;
+            int answer = Exponential(a, b);
+            Console.WriteLine(answer);
+            answer = ExpRecursive(a, b);
+            Console.WriteLine(answer);
+            ExpRecursive(a, b);
+
             Console.WriteLine(a);
             MyValue myValue = new MyValue();
             myValue.A = 25;
@@ -31,6 +37,35 @@ namespace Week6ConsoleApp
             Console.WriteLine(day + " " + month + " " + year);
 
         }
+        private static int Exponential(int a, int b)
+        {
+            if(b==0)
+            {
+                return 1;
+            }
+            int total = a;
+            
+            for(int i = 1; i<b; i++)
+            {
+                total = (total * a);
+                
+            }
+            return total;
+        }
+
+        private static int ExpRecursive(int a, int b)
+        {
+            if(b==0)
+            {
+                return 1;
+            }
+            else
+            {
+                return a * ExpRecursive(a, b - 1);
+            }
+   
+        }
+
 
         private static void Extract(DateTime date, out int day, out int month, out int year)
         {
